@@ -438,18 +438,34 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 0;
+    }
+    
+    .nav-brand {
+        font-size: 1.4rem;
+    }
+    
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+    
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 100px 0 40px;
+        padding: 80px 0 40px;
     }
     
     .hero-title {
         font-size: 2.5rem;
     }
     
-    .nav-menu {
-        gap: 1rem;
+    .hero-subtitle {
+        font-size: 1.1rem;
     }
     
     .section-title {
@@ -467,19 +483,70 @@ section {
     .notes-container {
         grid-template-columns: 1fr;
     }
+    
+    .image-placeholder {
+        width: 250px;
+        height: 350px;
+    }
 }
 
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
+    .navbar {
+        padding: 0.3rem 0;
     }
     
     .nav-brand {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     
     .nav-menu {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.3rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 0.5rem;
+        display: none;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 0.3rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .image-placeholder {
+        width: 200px;
+        height: 300px;
+    }
+    
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .memory-card {
+        padding: 1.5rem;
+    }
+    
+    .note-card {
+        padding: 1.5rem;
     }
 } 
