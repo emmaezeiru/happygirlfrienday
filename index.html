@@ -26,7 +26,7 @@
                         </button>
                         <button class="choice-button no-button" onclick="hideNoButton(this)">
                             <i class="fas fa-times"></i>
-                            No, not yet 😅
+                            No
                         </button>
                     </div>
                     <div class="gift-message" id="giftMessage" style="display: none;">
@@ -69,7 +69,7 @@
 
         function showFunMessage() {
             const message = document.createElement('div');
-            message.innerHTML = '<p style="color: #e91e63; font-size: 1.2rem; margin: 1rem 0;">i knew you would clock NO! but not this time babe!</p>';
+            message.innerHTML = '<p style="color: #e91e63; font-size: 1.2rem; margin: 1rem 0;">i knew you would click NO! but not this time babe!</p>';
             message.style.animation = 'fadeInUp 0.5s ease';
             document.querySelector('.choice-buttons').appendChild(message);
         }
