@@ -586,4 +586,394 @@ section {
     .note-card {
         padding: 1.5rem;
     }
+}
+
+/* Homepage Section */
+.homepage {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 60px;
+}
+
+.homepage-content {
+    text-align: center;
+    max-width: 800px;
+    z-index: 2;
+    position: relative;
+}
+
+.welcome-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.welcome-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-icon {
+    font-size: 3rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.welcome-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #e91e63;
+    margin: 0;
+}
+
+.welcome-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.welcome-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: linear-gradient(45deg, #e91e63, #ff6b9d);
+    color: white;
+    border-radius: 15px;
+    min-width: 120px;
+    transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease-out 0.4s both;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item i {
+    font-size: 1.5rem;
+}
+
+.feature-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.welcome-button {
+    background: linear-gradient(45deg, #e91e63, #ff6b9d);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+    animation: fadeInUp 1s ease-out 0.6s both;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+}
+
+.welcome-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+.homepage-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-elements {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-element {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+.floating-element:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.floating-element:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; }
+.floating-element:nth-child(3) { top: 40%; left: 20%; animation-delay: 2s; }
+.floating-element:nth-child(4) { top: 60%; left: 70%; animation-delay: 3s; }
+.floating-element:nth-child(5) { top: 80%; left: 30%; animation-delay: 4s; }
+.floating-element:nth-child(6) { top: 30%; left: 60%; animation-delay: 5s; }
+.floating-element:nth-child(7) { top: 70%; left: 10%; animation-delay: 6s; }
+.floating-element:nth-child(8) { top: 50%; left: 90%; animation-delay: 7s; }
+
+/* Responsive Homepage */
+@media (max-width: 768px) {
+    .welcome-card {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .welcome-title {
+        font-size: 2rem;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1rem;
+    }
+    
+    .welcome-features {
+        gap: 1rem;
+    }
+    
+    .feature-item {
+        min-width: 100px;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-card {
+        padding: 1.5rem;
+    }
+    
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-features {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-item {
+        min-width: 120px;
+    }
+}
+
+/* Gift Choice Section */
+.gift-choice {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0 60px;
+}
+
+.gift-content {
+    text-align: center;
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+}
+
+.gift-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.gift-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.gift-icon {
+    font-size: 4rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.gift-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #e91e63;
+    margin: 0;
+}
+
+.gift-question {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.choice-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.choice-button {
+    background: linear-gradient(45deg, #e91e63, #ff6b9d);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+    animation: fadeInUp 1s ease-out 0.4s both;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.choice-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+.no-button {
+    background: linear-gradient(45deg, #666, #999);
+}
+
+.no-button:hover {
+    background: linear-gradient(45deg, #e91e63, #ff6b9d);
+}
+
+.gift-message {
+    text-align: center;
+    animation: fadeInUp 0.5s ease;
+}
+
+.gift-message p {
+    font-size: 1.2rem;
+    color: #e91e63;
+    margin-bottom: 1.5rem;
+}
+
+.enter-gift-button {
+    background: linear-gradient(45deg, #e91e63, #ff6b9d);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 auto;
+}
+
+.enter-gift-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.4);
+}
+
+.gift-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-gifts {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-gift {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+.floating-gift:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.floating-gift:nth-child(2) { top: 20%; left: 80%; animation-delay: 1s; }
+.floating-gift:nth-child(3) { top: 40%; left: 20%; animation-delay: 2s; }
+.floating-gift:nth-child(4) { top: 60%; left: 70%; animation-delay: 3s; }
+.floating-gift:nth-child(5) { top: 80%; left: 30%; animation-delay: 4s; }
+.floating-gift:nth-child(6) { top: 30%; left: 60%; animation-delay: 5s; }
+.floating-gift:nth-child(7) { top: 70%; left: 10%; animation-delay: 6s; }
+.floating-gift:nth-child(8) { top: 50%; left: 90%; animation-delay: 7s; }
+
+/* Responsive Gift Choice */
+@media (max-width: 768px) {
+    .gift-card {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .gift-title {
+        font-size: 2rem;
+    }
+    
+    .gift-question {
+        font-size: 1.1rem;
+    }
+    
+    .choice-buttons {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .choice-button {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gift-card {
+        padding: 1.5rem;
+    }
+    
+    .gift-title {
+        font-size: 1.8rem;
+    }
+    
+    .gift-question {
+        font-size: 1rem;
+    }
+    
+    .choice-button {
+        min-width: 180px;
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
 } 
