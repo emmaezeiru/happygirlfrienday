@@ -265,16 +265,6 @@ section {
     left: 0;
     z-index: 1;
 }
-.gallery-item .image-placeholder img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
 
 .gallery-item .image-placeholder i,
 .gallery-item .image-placeholder p {
@@ -285,6 +275,43 @@ section {
     border-radius: 10px;
     margin: 5px;
     color: #333;
+}
+
+/* Video styling for gallery */
+.gallery-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+}
+
+.background-video {
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.background-video + i,
+.background-video + p {
+    z-index: 3;
+}
+
+/* Ensure video containers are properly positioned */
+.gallery-item .image-placeholder {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Make sure videos are visible */
+.gallery-item .image-placeholder video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Memories Section */
@@ -544,7 +571,7 @@ section {
     
     .image-placeholder {
         width: 200px;
-        height: 200px;
+        height: 300px;
     }
     
     .cta-button {
